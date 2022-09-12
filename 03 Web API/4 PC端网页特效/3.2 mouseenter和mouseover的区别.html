@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <script>
+        var father = document.querySelector('.father');
+        var son = document.querySelector('.son');
+        father.addEventListener('mouseenter', function() {
+                console.log(11);
+
+            })
+            // 鼠标移动到元素上就会触发mouseenter事件
+            /* 
+            1、mouseover鼠标经过自身盒子会触发，经过子盒子还会触发
+            2、mouseenter 只会经过自身盒子触发
+            原因：mouseenter不会冒泡  同样mouseleave 不会冒泡 */
+    </script>
+</body>
+
+</html>

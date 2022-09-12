@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 添加数组元素
+        // 1、push() 在数组的末尾 添加一个或多个数组元素
+        var arr = [1, 2, 3];
+        console.log(arr.push(4, 'pink')); //返回的结果是数组长度5
+        console.log(arr);
+        // 2、unshift() 在数组的开头 添加一个或多个数组元素
+        console.log(arr.unshift('red', 'purple')); //返回的结果是数组长度7
+        console.log(arr);
+
+        // 删除数组元素
+        // 1、pop() 删除数组的最后一个元素 一次只能删除一个元素
+        console.log(arr.pop()); // 无参数 返回的是删除的元素
+        console.log(arr);
+        // 2、shift() 删除数组的第一个元素 一次只能删除一个元素
+        console.log(arr.shift()); // 无参数 返回的是删除的元素
+        console.log(arr);
+
+        // 返回数组索引号方法 indexOf(数组元素)
+        // 只返回第一个满足条件的索引号，如果在数组里找不到该元素，返回-1
+        var arr = ['red', 'green', 'pink', 'green'];
+        console.log(arr.indexOf('blue'));
+        console.log(arr.indexOf('green'));
+        console.log(arr.lastIndexOf('green')); //从后面开始查找
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

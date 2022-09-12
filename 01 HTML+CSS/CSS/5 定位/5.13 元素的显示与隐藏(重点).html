@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1、display 
+            display:none  隐藏对象
+            display:block 除了转换为块级元素之外 同时还有显示元素的意思
+            display隐藏元素后 不再占有原来的位置 */
+        /* 2、visibility
+            visibility:visible  元素可视
+            visibility:hidden   元素隐藏
+            visibility隐藏元素后  继续占有原来的位置*/
+        /* 3、overflow  
+            overflow：visible 显示溢出的部分(默认)
+            overflow：hidden  隐藏溢出的部分 注：有定位的盒子慎用 因为它会隐藏多余的部分。
+            overflow：scroll  溢出的时候显示滚动条 不溢出也显示滚动条
+            overflow：auto    溢出的时候显示滚动条 不溢出不显示滚动条*/
+        
+        .peppa {
+            /* display: none; */
+            /* visibility: hidden; */
+            overflow: scroll;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        .george {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="peppa">
+        小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇小猪佩奇
+    </div>
+    <div class="george"></div>
+</body>
+
+</html>

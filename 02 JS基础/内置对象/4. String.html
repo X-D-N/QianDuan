@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = 'andy';
+        console.log(str.length);
+        // 对象才有属性和方法 ，即复杂数据类型才有属性和方法
+        // 简单数据类型为什么也有length 属性？？
+
+        // 基本包装类型： js把简单数据类型包装成了复杂数据类型
+        // (1) 把简单数据类型包装成了复杂数据类型
+        var temp = new String('andy');
+        // (2) 把临时变量的值给str
+        str = temp;
+        // (3) 销毁临时变量
+        temp = null;
+
+        // 基本包装类型：String Number Boolean
+
+        // 字符串的不可变性：指里面的值不可变，虽然看上去变了，其实是地址变了，内存中开辟了另一个内存空间
+        // 尽量避免字符串拼接 ：因为重新给字符串赋值，会在内存中开辟更多的空间
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 移动盒子的位置 ：1、定位 2、盒子的外边距 3、2d转换移动 */
+        /* translate优点：不会影响到其他元素的位置！！！ */
+        /* 对行内标签没有作用 */
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /*  transform: translate (x,y)
+            x:x轴上移动的位置 y:y轴上移动的位置*/
+            /* transform: translate(100px, 100px); */
+            /* transform: translateX(); */
+            /* transform: translateY(); */
+            /* 百分比是盒子自身的宽度和高度来对比的 */
+            transform: translate(50%, 50%);
+        }
+        
+        p {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <p></p>
+    </div>
+</body>
+
+</html>

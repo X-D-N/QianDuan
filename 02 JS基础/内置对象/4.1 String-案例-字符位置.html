@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 根据字符返回位置 indexOf('要查找的字符'，[起始位置])
+        var str = '改革春风吹满地，春天来了';
+        console.log(str.indexOf('春', [3]));
+
+        //案例-- 查找字符串'abcoefoxyozzopp'中所有o出现的位置以及次数
+        var str = 'abcoefoxyozzopp';
+        var index = str.indexOf('o');
+        var sum = 0;
+        while (index !== -1) {
+            console.log(index);
+            sum++;
+            index = str.indexOf('o', [index + 1]);
+        }
+        console.log(sum);
+
+        // 根据位置返回字符
+        // 1、chartAt(index)
+        var str = 'andy';
+        console.log(str.charAt(3));
+        // 2、chartCodeAt(index) 返回相应索引号的字符ASCII值  目的：判断用户按下了哪个键
+        console.log(str.charCodeAt(0)); //97
+        // 3、str[index] H5新增的
+        console.log(str[0]); //a
+
+        //案例-- 查找字符串'abcoefoxyozzopp'中出现次数最多的字符，并统计其次数
+        var str = 'abcoefoxyozzopp';
+        var o = {};
+        for (var i = 0; i < str.length; i++) {
+            var chars = str.charAt(i);
+            if (o[chars]) { //o[chars]得到的是属性值
+                o[chars]++;
+
+            } else
+                o[chars] = 1;
+        }
+        console.log(o);
+        // 遍历对象
+        var max = 0;
+        var ch = '';
+        for (var k in o) {
+            if (o[k] > max) {
+                max = o[k];
+                ch = k;
+            }
+        }
+        console.log(max);
+        console.log('出现最多的字符是:' + ch);
+    </script>
+    <source>
+</head>
+
+<body>
+
+</body>
+
+</html>

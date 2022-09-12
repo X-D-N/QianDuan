@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 冒泡排序： 重复走访过要排序的数列，一次比较两个元素 如果顺序错误就交换过来 重复进行至没有再需要交换，即排序完成 -->
+    <script>
+        var arr = [5, 4, 3, 2, 1];
+        for (var i = 0; i <= arr.length - 1; i++) {
+            // 外层循环管 趟数
+            for (var j = 0; j <= arr.length - i - 1; j++) {
+                // 里层管 交换的次数
+                // 内部交换2个变量的值
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 相对定位和固定定位的混合 */
+        /* 粘性定位的特点：
+        1、以可视窗口为参照点
+        2、占有原先的位置
+        3、必须添加边偏移中一个 top left right bottom*/
+        
+        body {
+            height: 3000px;
+        }
+        
+        .nav {
+            position: sticky;
+            top: 10px;
+            width: 800px;
+            height: 50px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav"></div>
+</body>
+
+</html>

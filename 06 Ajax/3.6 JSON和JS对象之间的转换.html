@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 数据交换格式 ：就是服务器端和客户端之间进行数据传输与交换的格式
+        /* 有两种数据交换的格式：XML JSON 
+           XML和HTML区别：
+           XML：用来传输和存储数据 是数据的载体
+           HTML：用来描述网页上的内容 是网页内容的载体
+
+           JSON ：就是JavaScript对象和数组的字符串表示法 它使用文本表示一个JS对象或数组的信息 
+           JSON本质就是字符串 
+           JSON是一种轻量级的文本数据交换格式 在作用上类似XML 专门用于存储和传输数据 但JSON更小更快更易解析
+
+        */
+
+        /* JSON中 
+        对象结构：表示为{}括起来的内容 key必须是英文双引号包裹的字符串 不能出现单引号
+        数组结构：表示为[]括起来的内容*/
+
+        // JSON是JS对象的字符串表示法 使用一个文本表示JS对象的信息 本质是一个字符串
+
+        // var jsonStr = '{"a": "Hello", "b": "world"}'
+        // var obj = JSON.parse(jsonStr)  //把JSON字符串转换为JS对象
+        // console.log(obj)
+
+        var obj2 = {
+            a: 'hello',
+            b: 'world',
+            c: false
+        }
+        var str = JSON.stringify(obj2) //把JS对象转换为JSON字符串
+        console.log(str)
+        console.log(typeof str)
+
+        /* 
+          序列化：把数据对象转化为字符串的过程 JSON.stringify()
+          反序列化：把字符串转化为数据对象的过程 JSON.parse()
+        */
+    </script>
+</body>
+
+</html>

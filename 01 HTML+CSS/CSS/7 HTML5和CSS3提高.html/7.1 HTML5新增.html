@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input::placeholder {
+            /* ！！！修改placeholder属性 */
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 新增的语义化标签 -->
+    <header>头部标签</header>
+    <nav>导航标签</nav>
+    <article>内容标签</article>
+    <section>定义文档的某个区域</section>
+    <aside>侧边栏标签</aside>
+    <footer>尾部标签</footer>
+    <!-- 注：这种语义化标准主要是针对搜索引擎的
+             在IE9中，需要把这些元素转化为块级元素 -->
+
+    <!-- 新增的多媒体标签 -->
+    <!-- video 支持3种视频格式 MP4(常用) WebM Ogg
+        属性值：  
+        src：视频url地址 
+        autoplay：自动播放        
+        controls： 显示播放控件
+        muted：静音播放
+        loop：循环播放
+        poster：加载等待的画面图片
+       -->
+    <video src="" controls="controls" autoplay="autoplay" muted="muted" loop="loop"></video>
+
+    <!-- audio 支持3种音频格式 MP3(常用) WebM Ogg 
+         属性值：
+        src：音频的url地址
+        autoplay：自动播放 
+        controls： 显示播放控件
+        loop：循环播放
+        muted：静音播放
+     -->
+    <audio src=""></audio>
+    <br>
+
+    <!-- 新增的input表单 -->
+    <form action="">
+        <ul>
+            <li>邮箱：<input type="email"></li>
+            <li>网址：<input type="url"></li>
+            <li>日期：<input type="date"></li>
+            <li>时间：<input type="time"></li>
+            <li>数量：<input type="number"></li>
+            <li>手机号码：<input type="tel"></li>
+            <li>搜索：<input type="search"></li>
+            <li>颜色：<input type="color"></li>
+            <li><input type="submit" value="提交"></li>
+        </ul>
+    </form>
+
+    <!-- 新增的表单属性 -->
+    <!-- required:表示内容不能为空
+         ！placeholder:表单的提示信息
+         autofocus:自动聚焦
+         autocomplete:on(默认，在字段开始键入时，显示之前键入过的值) / off(关闭 需要放在表单内，同时加上name属性 同时成功提交)
+         ！multiple:可以选择多个文件提交 -->
+    <form action="">
+        <input type="search" name="sousuo" required="required" placeholder="请输入" autofocus="autofocus" autocomplete="off">
+        <input type="file" multiple="multiple">
+        <input type="submit" value="提交">
+    </form>
+
+</body>
+
+
+</html>

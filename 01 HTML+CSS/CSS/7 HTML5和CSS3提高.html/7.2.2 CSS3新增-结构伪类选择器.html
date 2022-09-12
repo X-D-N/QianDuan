@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li:first-child {
+            /* 选择第一个孩子 */
+            color: pink;
+        }
+        
+        ul li:first-of-type {
+            color: aqua;
+        }
+        
+        ul li:last-child {
+            /* 选择最后一个孩子 */
+            color: pink;
+        }
+        
+        ul li:last-of-type {
+            color: aquamarine;
+        }
+        
+        ul li:nth-child(even) {
+            /* 选择第n个孩子  n可以是数字、公式、关键字（奇偶数）*/
+            color: skyblue;
+        }
+        
+        ul li:nth-of-type(even) {
+            /* ！！！！区别：
+            nth-child会把所有的盒子都排列序号 先看后面的孩子，在看前面标签是否满足
+            nth-of-type会把指定元素的盒子排列序号 之后再看要选第几个孩子  */
+            color: skyblue;
+        }
+        
+        ul li:nth-child(odd) {
+            color: green;
+        }
+        
+        ol li:nth-child(n) {
+            /* 从0开始，每次+1 往后计算 这里必须是n 不能是其他字母 选择了所有的孩子 */
+            background-color: pink;
+        }
+        
+        ol li:nth-child(2n) {
+            background-color: yellow;
+        }
+        
+        ol li:nth-child(2n+1) {
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ul>
+
+    <ol>
+        <li>我是第1个孩子</li>
+        <li>我是第2个孩子</li>
+        <li>我是第3个孩子</li>
+        <li>我是第4个孩子</li>
+        <li>我是第5个孩子</li>
+        <li>我是第6个孩子</li>
+        <li>我是第7个孩子</li>
+        <li>我是第8个孩子</li>
+    </ol>
+</body>
+
+</html>

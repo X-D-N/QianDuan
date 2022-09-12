@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 过渡动画 是从一个状态 渐渐过渡到另一个状态 -->
+    <!-- !!!口诀：谁做过渡给谁加 -->
+
+    <style>
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* transition: 变化的属性 花费时间 运动曲线 何时开始；(后面两个属性可以省略) */
+            /* transition: width .5s ease 1s,; */
+            /* 想要多个属性变化 1、利用逗号分割 */
+            /* transition: width .5s, height .5s; */
+            /* 想要多个属性变化 2、属性写all */
+            transition: all .5s;
+        }
+        
+        div:hover {
+            width: 400px;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

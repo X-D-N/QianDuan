@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background-color: rgb(0, 153, 255);
+        }
+        
+        .one {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        .two {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+        
+        .three {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+        
+        .four {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        
+        span {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1、脱标 
+         1）脱离标准流的控制 移动到指定位置 
+         2）浮动的盒子不再保留原先的位置 -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <br>
+
+    <!-- 2、浮动元素一行显示
+        1) 如果多个盒子都设置了浮动 他们会按照属性值一行内显示并且顶端对齐。
+        2) 浮动的元素是互相紧贴在一起的（没有缝隙） 如果父级的盒子装不下这些浮动的盒子 多出的盒子会另起一行对齐-->
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+    <div class="four"></div>
+
+
+    <!-- 3、浮动元素具有行内块元素特性 -->
+    <span></span>
+</body>
+
+</html>

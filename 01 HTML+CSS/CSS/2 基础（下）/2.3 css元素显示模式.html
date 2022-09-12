@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .xianshi {
+            width: 150px;
+            height: 50px;
+            background-color: pink;
+            display: block;
+        }
+        
+        .kuaiji {
+            width: 300px;
+            height: 100px;
+            background-color: purple;
+            display: inline;
+        }
+        
+        .hangnei {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 块元素 
+        自己独占一行；
+        高度、宽度、外边距和内边距都可以控制；
+        宽度默认是父级宽度；
+        是一个容器及盒子，里面可以放行内或者块级元素；
+    
+        注意：文字类的元素内不能使用块级元素！比如<p>、<h1>~<h6>里面都不能放其他块级元素
+    -->
+    <h1>2</h1>
+    <h2>2</h2>
+    <h3>2</h3>
+    <h4>2</h4>
+    <h5>2</h5>
+    <h6>2</h6>
+    <p>1</p>
+    <div>典型的块元素</div>
+    <ul>1</ul>
+    <ol>1</ol>
+    <li>1</li>
+
+    <!-- 行内元素 
+        相邻的元素在一行上 一行可以显示多个；
+        宽、高直接设置是无效的；
+        宽度默认是它本身内容的宽度；
+        只能容纳文本和其他的行内元素；
+
+        注意：链接里面不能再放链接！
+             特殊情况链接<a>里面可以放块级元素，但是给<a>转换一下块级模式最安全。
+    -->
+    <a href="">行内</a>
+    <strong>行内</strong>
+    <b>行内</b>
+    <em>行内</em>
+    <i>行内</i>
+    <del>行内</del>
+    <s>行内</s>
+    <ins>行内</ins>
+    <u>行内</u>
+    <span>典型的行内元素</span>
+
+    <!-- 行内块元素  同时具有块元素和行内元素的特点
+        相邻行内元素(行内块)在一行上，之间会有空白缝隙， 一行可以显示多个；
+        默认宽度就是其本身内容的宽度；
+        高度、行高、外边距、内边距都是可以控制的；
+    -->
+    <img src="">
+    <input type="text">
+    <td></td>
+
+
+    <!-- 显示模式的转换 -->
+    <a href="" class="xianshi">显示模式的转换</a>
+    <a href="" class="xianshi">显示模式的转换</a>
+    <div class="kuaiji">我是块级元素</div>
+    <div class="kuaiji">我是块级元素</div>
+    <span class="hangnei">行内元素转换为行内块元素</span>
+    <span class="hangnei">行内元素转换为行内块元素</span>
+
+
+</body>
+
+</html>

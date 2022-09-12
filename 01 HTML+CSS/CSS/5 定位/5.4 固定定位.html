@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 固定定位是元素固定于浏览器可视区的位置
+           在浏览器页面滚动时元素的位置不会变 */
+        /* 特点：
+            1、以浏览器的可视窗口为参照  
+                与父元素没有任何关系  
+                不随着滚动条滚动而滚动
+            2、不占有原先的位置  
+                 也是脱标的 一种特殊的绝对定位*/
+        
+        .dj {
+            position: fixed;
+            top: 100px;
+            right: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dj">
+        <img src="../image/pvp.png" alt="">
+    </div>
+</body>
+
+</html>

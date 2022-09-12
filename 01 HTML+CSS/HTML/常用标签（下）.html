@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h4>表格标签</h4>
+    <!-- 表格标签 cellpadding：内容和单元格边框之间的距离    cellspacing:单元格和单元格之间的距离-->
+    <table align="center" border="1" cellpadding="0" cellspacing="0" width="500" height="200">
+        <!-- tr表示一行 -->
+        <thead>
+            <tr>
+                <!-- th表示表头部分，文本内容加粗居中显示 -->
+                <th>姓名</th>
+                <th>性别</th>
+                <th>电话</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- td表示一个单元格内的内容 -->
+                <td>刘德华</td>
+                <td>男</td>
+                <td>123</td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- 表格结构标签 thead tbody -->
+    <br>
+
+    <!-- 合并单元格 首先找到目标单元格，确定跨行还是跨列，加上要合并的单元格个数，后删除多余的单元格-->
+    <table width="500" height="249" border="1" cellspacing="0">
+        <tr>
+            <td></td>
+            <td colspan="2"></td>
+            <!-- 跨列合并 -->
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td rowspan="2"></td>
+            <!-- 跨行合并 -->
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+
+    <h4>列表标签</h4>
+    <!-- 列表标签 -->
+    <!-- 无序列表 -->
+    <ul>
+        <li>苹果</li>
+        <li>柠檬</li>
+        <li>橘子</li>
+    </ul>
+
+    <!-- 有序列表 -->
+    <ol>
+        <li>苹果</li>
+        <li>柠檬</li>
+        <li>橘子</li>
+    </ol>
+
+    <!-- 自定义列表 经常用于对术语进行解释说明-->
+    <dl>
+        <dt>关注我们(名词)</dt>
+        <dd>新浪微博(名词解释1)</dd>
+        <dd>官方微信(名词解释2)</dd>
+        <dd>联系我们(名词解释3)</dd>
+    </dl>
+
+    <br>
+    <br>
+
+    <h4>表单标签</h4>
+    <!-- 表单标签 为了收集用户信息 常用于注册页面
+    一个完整的表单通常由表单域、表单控件、提示信息3个部分构成-->
+
+    <!-- 表单域  form标签 会把它范围内的表单元素信息提交给服务器
+    action:url地址 用于指定接收并处理表单数据的服务器程序的url地址
+    method:get/post 用于设置表单数据的提交方式
+    name:表单的名称-->
+    <form action="demo.php" method="post" name="name1">
+    </form>
+
+    <!-- 表单控件(表单元素) -->
+    <!-- input 输入表单元素 除了type属性外，
+    name value 是每个表单元素都有的属性值，主要给后台人员使用
+    name表单元素的名字，要求单选按钮和复选框要有相同的name值
+    单选按钮和复选框可以设置checked属性，当页面打开的时候就可以默认选中该按钮
+    maxlength 正整数 规定输入字段中的字符最大长度-->
+    <form action="xxx.php" method="get">
+        <!-- text 文本框 用户可以里面输入任何文字 -->
+        用户名: <input type="text" name="username" value="请输入用户名" maxlength="6"> <br>
+        <!-- password 密码框 用户看不见输入的密码 -->
+        密码: <input type="password" name="pwd"> <br>
+        <!-- radio 单选按钮 可以实现多选1 
+        ！！！注意：这里的一组单选按钮必须要有相同的名字才能实现多选1-->
+        性别: 男 <input type="radio" name="sex" value="男" checked="checked"> 女 <input type="radio" name="sex" value="女"> <br>
+        <!--checkbox 复选框 可以实现多选  -->
+        爱好: 吃饭<input type="checkbox" name="hobby" value="吃饭" checked="checked"> 睡觉 <input type="checkbox" name="hobby" value="睡觉" checked="checked"> 打豆豆<input type="checkbox" name="hobby" value="打豆豆"> <br>
+
+        <!--默认提交 点击提交按钮 可以把表单域form里面的表单元素里面的值 提交给后台服务器 -->
+        <input type="submit" value="免费注册">
+        <!-- 默认重置 重置按钮可以还原表单元素初始的默认状态 -->
+        <input type="reset" value="重新填写"> <br>
+
+        <!-- 普通按钮 -->
+        <input type="button" value="获取短信验证码"> <br>
+        <!-- 文件域 上传文件使用 -->
+        上传头像: <input type="file">
+
+    </form>
+    <br>
+    <br>
+
+
+    <!-- label标签 标注标签 用于绑定一个表单 
+    当点击<label>标签内的文本时，浏览器会自动将焦点(光标)转到或者选择对应的表单元素上，用来增加用户体验
+    <label>标签的for属性 应与相关元素的id属性相同 -->
+    <label for="text">用户名:</label>
+    <input type="text" name="text" id="text"> <br>
+
+    <label for="nan">男</label><input type="radio" name="sex" id="nan">
+    <label for="nv">女</label><input type="radio" name="sex" id="nv">
+    <br><br>
+
+
+    <!-- select 下拉表单元素 -->
+    <form>
+        籍贯:
+        <select>
+            <option>山东</option>
+            <option>上海</option>
+            <!-- 默认选中状态 selected -->
+            <option selected="selected">北京</option>
+        </select>
+    </form>
+    <br><br>
+
+
+    <!-- textarea 文本域元素 定义多行文本输入 留言板 评论 -->
+    <form>
+        今日反馈:
+        <textarea cols="50" rows="5">textarea 文本域元素 定义多行文本输入 留言板 评论</textarea>
+    </form>
+
+
+
+
+
+</body>
+
+</html>

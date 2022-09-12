@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 1. 导入模板引擎 art-template -->
+    <!-- 在 window 全局，多一个函数，叫做 template('模板的Id', 需要渲染的数据对象) -->
+    <script src="./lib/template-web.js"></script>
+    <script src="./lib/jquery.js"></script>
+</head>
+
+<body>
+
+    <div id="container"></div>
+
+    <!-- 3. 定义模板 -->
+    <!-- 3.1 模板的 HTML 结构，必须定义到 script 中 把里面的内容当做HTML解析-->
+    <script type="text/html" id="tpl-user">
+        <!-- {{}} 可以进行 变量的输出 对象属性的输出 三元表达式输出 逻辑或输出 加减乘除等表达式输出-->
+        <h1>{{name}} ------ {{age}}</h1>
+
+        <!-- {{@ value}} 原文输出  如果要输出的value值中 包含了HTML标签 需要使用该语法 才能保证HTML标签被正常渲染-->
+        {{@ test}}
+
+        <!-- 条件输出 在{{}}使用if…else if…/if 的方式 按需输出-->
+        <div>
+            {{if flag === 0}} flag的值是0 {{else if flag === 1}} flag的值是1 {{/if}}
+        </div>
+
+        <!-- 循环输出 -->
+        <ul>
+            {{each hobby}}
+            <li>索引是:{{$index}}，循环项是:{{$value}}</li>
+            {{/each}}
+        </ul>
+
+        <!-- 过滤器 {{value | filterName}}  -->
+        <h3>{{regTime | dateFormat}}</h3>
+    </script>
+
+    <script>
+        // 定义处理时间的过滤器  过滤器的本质就是function 处理函数
+        template.defaults.imports.dateFormat = function(date) {
+            var y = date.getFullYear()
+            var m = date.getMonth() + 1
+            var d = date.getDate()
+
+            return y + '-' + m + '-' + d
+        }
+
+
+        // 2. 定义需要渲染的数据
+        var data = {
+            name: 'zs',
+            age: 20,
+            test: '<h3>测试原文输出</h3>',
+            flag: 1,
+            hobby: ['吃饭', '睡觉', '写代码'],
+            regTime: new Date()
+        }
+
+        // 4. 调用 template 函数 模板的id 和 数据
+        var htmlStr = template('tpl-user', data)
+        console.log(htmlStr)
+
+        // 5. 渲染HTML结构
+        $('#container').html(htmlStr)
+    </script>
+</body>
+
+</html>

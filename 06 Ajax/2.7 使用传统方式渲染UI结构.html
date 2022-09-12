@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./lib/jquery.js"></script>
+</head>
+
+<body>
+    <div id="title"></div>
+    <div>姓名：<span id="name"></span></div>
+    <div>年龄：<span id="age"></span></div>
+    <div>会员：<span id="isVIP"></span></div>
+    <div>注册时间：<span id="regTime"></span></div>
+    <div>爱好：
+        <ul id="hobby">
+            <li>爱好1</li>
+            <li>爱好2</li>
+        </ul>
+    </div>
+
+    <script>
+        // var rows = []
+        // $.each(res.data, function(i, item) {
+        //     var str = '<li class="list-group-item"><span class="badge" style="background-color: #F0AD4E;">评论时间：' + item.time + '</span><span class="badge" style="background-color: #5BC0DE;">评论人：' + item.username + '</span>' + item.content + '</li>'
+        //     rows.push(str)
+        // })
+        // $('#cmt-list').empty().append(rows.join(''))
+
+        /* 上述代码是通过字符串拼接的方式 来渲染UI结构 
+           如果UI结构比较复杂 拼接字符串的时候需要格外注意引号之前的嵌套 一旦需求发生变化 修改也非常麻烦 */
+
+        /* 模板引擎  
+             可以根据程序员指定的  模板结构+数据 传给模板引擎 然后自动生成一个完整的HTML 
+            好处：
+            1、减少字符串拼接
+            2、代码结构更清晰
+            3、代码更易维护与阅读*/
+
+
+        var data = {
+            title: '<h3>用户信息</h3>',
+            name: 'zs',
+            age: 20,
+            isVIP: true,
+            regTime: new Date(),
+            hobby: ['吃饭', '睡觉', '打豆豆']
+        }
+
+
+        $(function() {
+            $('#name').html(data.name)
+            $('#title').html(data.title)
+            $('#age').html(data.age)
+            $('#isVIP').html(data.isVIP)
+            $('#regTime').html(data.regTime)
+
+            var rows = []
+            $.each(data.hobby, function(i, item) {
+                rows.push('<li>' + item + '</li>')
+            })
+            $('#hobby').html(rows.join(''))
+        })
+    </script>
+</body>
+
+</html>

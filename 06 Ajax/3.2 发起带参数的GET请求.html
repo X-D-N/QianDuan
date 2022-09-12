@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 无论是使用 $.ajax() $.get() 还是使用xhr对象发起get请求 本质上都是直接将参数以查询字符串的方式 追加到url地址后面 然后发送到服务器
+        var xhr = new XMLHttpRequest()
+            // 以?的形式提供参数 查询字符串 多个参数用&进行拼接
+        xhr.open('GET', 'http://www.liulongbin.top:3006/api/getbooks?id=1')
+        xhr.send()
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                console.log(xhr.responseText)
+            }
+        }
+    </script>
+</body>
+
+</html>

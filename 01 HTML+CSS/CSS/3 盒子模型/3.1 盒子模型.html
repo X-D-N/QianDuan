@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* 边框 */
+            /* 测量盒子的时候 不需要测量边框 */
+            width: 300px;
+            height: 200px;
+            /* 边框的粗细 一般情况下都用px */
+            border-width: 5px;
+            /* 边框的样式 solid实线 dashed虚线 dotted点线*/
+            border-style: dotted;
+            /* 边框的颜色 */
+            border-color: pink;
+            /* 边框的复合写法 没有先后顺序！*/
+            /* border: 1px solid red; */
+            /* 想要分别设置单个边框 */
+            /* 上边框 */
+            border-top: 1px solid red;
+            /* 下边框 */
+            border-bottom: 1px solid green;
+            /* 左边框 */
+            border-left: 1px solid green;
+            /* 右边框 */
+            border-right: 1px solid red;
+            /* 表格细线边框 合并相邻的边框 常用于表格 因为每个单元格都有1px的边框 拼在一起就是2px 要想使其变成1px 就可以使用collapse*/
+            border-collapse: collapse;
+        }
+        
+        .padding {
+            /* 内边距 边框与内容之间的距离*/
+            /* 会撑大盒子 如果保证盒子和效果图一致则让width/height减去多出来的内边距即可 */
+            /* 如果盒子本身没有指定width/height属性，则padding不会撑开盒子大小 */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            padding-left: 20px;
+            padding-top: 20px;
+            /* 复合属性 可以有1~4个值*/
+            padding: 5px;
+            /* 表示上下左右5px的内边距 */
+            padding: 5px 10px;
+            /* 表示上下5px 左右10px */
+            padding: 5px 10px 20px;
+            /* 表示 上5px 左右10px 下20px*/
+            padding: 5px 10px 20px 30px;
+            /* 表示 上5px 右10px 下20px 左30px 顺时针 */
+        }
+        
+        .margin1 {
+            /* 外边距 盒子与盒子之间的距离 */
+            /* 简写方式与padding一致 */
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin-bottom: 20px;
+        }
+        
+        .margin2 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 盒子模型组成 ： border边框 content内容 padding内边距 margin外边距 -->
+
+    <!-- border边框 -->
+
+    <div></div>
+    <br>
+    <br>
+
+    <!-- padding内边距 -->
+    <div class="padding">盒子内容盒子内容盒子内容盒子内容盒子内容</div>
+    <br>
+    <br>
+
+    <!-- margin外边距 -->
+    <div class="margin1">1</div>
+    <div class="margin2">2</div>
+
+</body>
+
+</html>

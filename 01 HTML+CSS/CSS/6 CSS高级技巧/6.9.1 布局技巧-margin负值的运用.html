@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul li {
+            /* 相邻两个边框会粗 1+1=2px */
+            float: left;
+            list-style: none;
+            width: 150px;
+            height: 200px;
+            border: 1px solid red;
+            /* 将边框变细 直接给margin负值  压住前一个盒子边框*/
+            margin-left: -1px;
+        }
+        
+        ul li:hover {
+            /* 四个边框都变成蓝色的 */
+            /* 当鼠标经过盒子时，提高该盒子的层级 （如果没有定位 则加相对定位(会压住标准流、浮动) 如果有定位 则加z-index） */
+            position: relative;
+            border-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+</body>
+
+</html>

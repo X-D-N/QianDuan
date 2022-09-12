@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 1000px;
+            height: 2000px;
+            /* 背景颜色 background-color: transparent; 默认是透明的 */
+            background-color: pink;
+            /* 背景颜色半透明 */
+            /* background: rgba(red, green, blue, alpha); 最后一个参数是透明度 取值范围在0~1之间 */
+            /* background: rgba(0, 0, 0, 0.1); 习惯把0省略掉*/
+            background: rgba(0, 0, 0, .1);
+            /* 背景图片  必须加上url*/
+            /* 页面元素既可以添加页面背景颜色也可以添加背景图片 背景图片会压住背景颜色 */
+            background-image: url(../image/4.png);
+            /* 背景平铺  默认情况下都是平铺的*/
+            /* background-repeat: repeat-x; */
+            /* background-repeat: repeat-y; */
+            background-repeat: no-repeat;
+            /* 背景图片位置 */
+            /* 方位名词 left right center top bottom   
+            注：right center 和center right 效果是等价的 和顺序无关
+                第二个参数可以省略 默认居中显示*/
+            background-position: left top;
+            /* 精确单位 第一个肯定是x坐标 第二个肯定是y坐标 
+            注：如果只指定一个数值，那么第一个肯定是x坐标 另一个默认垂直居中*/
+            background-position: 20px 50px;
+            /* 混合单位 第一个肯定是x坐标 第二个肯定是y坐标 */
+            background-position: 20px center;
+            /* 背景固定 默认scroll*/
+            background-attachment: fixed;
+        }
+        
+        .fuhe {
+            /* 背景复合写法 */
+            /* background:背景颜色 背景图片地址 背景平铺 背景图像滚动 背景图片位置*/
+            background: green url(../image/4.png) no-repeat fixed 20px 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <!-- <div class="fuhe"></div> -->
+</body>
+
+</html>

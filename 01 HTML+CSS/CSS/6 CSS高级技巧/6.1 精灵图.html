@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 精灵图总结：
+        1、主要针对小的背景图片使用
+        2、只要借助背景位置来实现--background-position
+        3、一般情况下 精灵图都是负值（x轴右边走是正值，左边走是负值 ，y轴下边走是正值，上边走是负值）*/
+        
+        .box1 {
+            width: 60px;
+            height: 60px;
+            background-color: pink;
+            margin: 100px auto;
+            background: url(../image/sprites.png) no-repeat -182px 0;
+        }
+        
+        .box2 {
+            width: 27px;
+            height: 25px;
+            background-color: pink;
+            margin: 200px auto;
+            background: url(../image/sprites.png) no-repeat -155px -106px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+
+</html>

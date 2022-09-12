@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        // 传统方式 window.onload = function(){} 当文档内容完全加载完成后触发该事件
+        // 传统注册事件方式 只能写一次 如果有多个 以最后一个为准
+
+        // window.onload = function() {
+        //     var btn = document.querySelector('button');
+        //     btn.addEventListener('click', function() {
+        //         alert('点击我');
+        //     })
+        // }
+        // window.onload = function() {
+        //     alert(22);
+        // }
+
+        // addEventListener 没有限制
+        window.addEventListener('load', function() {
+            var btn = document.querySelector('button');
+            btn.addEventListener('click', function() {
+                alert('点击我');
+            })
+        })
+        window.addEventListener('load', function() {
+
+            alert(22);
+        })
+
+        // 1、load 等页面内容全部加载完毕，包含页面dom元素 图片 flash  css 等等
+        // 2、DOMContentLoaded 是DOM 加载完毕，不包含图片 falsh css 等就可以执行 加载速度比 load更快一些
+        document.addEventListener('DOMContentLoaded', function() {
+            alert(33);
+        })
+    </script>
+</head>
+
+<body>
+
+    <button>点击</button>
+
+</body>
+
+</html>

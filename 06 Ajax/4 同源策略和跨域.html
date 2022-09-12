@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 同源  如果两个页面的协议、域名和端口都相同 则两个页面具有相同的源
+        /* 同源策略是浏览器提供的一个安全功能 
+           同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互 这是一个用于隔离潜在恶意文件的重要安全机制
+                  即不允许非同源的URL之间进行资源交互
+        */
+
+        // 跨域 与同源对立
+        /*  浏览器允许发起跨域请求 但是跨域请求回来的数据会被浏览器的同源策略拦截 无法被页面获取到 */
+        /* 如何实现跨域请求：JSONP CORS
+           1、JSONP 出现的早兼容性好 是一种临时解决方案 缺点：只支持GET请求 不支持POST请求
+           2、CORS 出现的较晚 是W3C标准 属于跨域Ajax请求的根本解决方案 支持GET和POST请求 缺点：不兼容某些低版本浏览器  */
+    </script>
+</body>
+
+</html>

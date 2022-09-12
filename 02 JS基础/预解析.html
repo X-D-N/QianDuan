@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 先把代码按预解析排好 再按照作用域链查找结果即可
+        f1();
+        console.log(c);
+        console.log(b);
+        console.log(a);
+
+        function f1() {
+            var a = b = c = 9;
+            // 相当于 var a = 9; b=9; c=9;  b和c直接赋值 没有声明 当全局变量看
+            // 集体声明应该是var a = 9, b = 9, c = 9;
+            console.log(a);
+            console.log(b);
+            console.log(c);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

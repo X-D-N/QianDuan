@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 动画的基本使用：1、先定义动画 2、再调用动画 -->
+    <style>
+        /* 页面一打开 盒子从左边走到右边 */
+        /* 1、定义动画 */
+        /* from to 等价于 0%  100% */
+        
+        @keyframes move {
+            /* 开始状态 */
+            0% {
+                transform: translateX(0px);
+            }
+            /* 结束状态 */
+            100% {
+                transform: translate(1000px);
+            }
+        }
+        
+        @keyframes move1 {
+            /* 百分比就是总的时间的划分 */
+            /* 开始状态 */
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(1000px, 0);
+            }
+            50% {
+                transform: translate(1000px, 500px);
+            }
+            75% {
+                transform: translate(0, 500px);
+            }
+            /* 结束状态 */
+            100% {
+                transform: translate(0, 0);
+            }
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 2、调用动画 */
+            /* 动画名称 */
+            animation-name: move1;
+            /* 持续时间 */
+            animation-duration: 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+        
+        img {
+            display: block;
+            margin: 100px auto;
+            transition: all 1s;
+        }
+        
+        img:hover {
+            /* 左手准则 */
+            /* X 正值 ：往里面旋转 */
+            /* transform: rotateX(180deg); */
+            /* Y 正值 ：向右旋转 */
+            /* transform: rotateY(45deg); */
+            /* Z 正值 ：瞬时针旋转 */
+            /* transform: rotateZ(45deg); */
+            /* transform: rotate3d(x,y,z,deg); */
+            transform: rotate3d(1, 1, 1, 45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../image/pig.jpg" alt="">
+</body>
+
+</html>

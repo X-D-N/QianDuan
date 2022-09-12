@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=80, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 属性选择器  权重为10 */
+        /* 必须是input 但同时具有value这个属性 选择这个元素[] */
+        
+        input[value] {
+            color: pink;
+        }
+        
+        input[type=text] {
+            color: pink;
+        }
+        /* 通过不同的属性值来选择 重点 */
+        
+        div[class^=icon] {
+            color: pink;
+        }
+        /* 选择属性值开头的某些元素 */
+        
+        div[class$=data] {
+            color: blue;
+        }
+        /* 选择属性值结尾的某些元素 */
+        
+        div[class*=icon] {
+            color: pink;
+        }
+        /* 选择含有属性值的某些元素 */
+    </style>
+</head>
+
+<body>
+    <!-- <input type="text" value="请输入">
+    <input type="text"> -->
+
+    <input type="text" name="" id="">
+    <input type="password" name="" id="">
+
+    <!-- 将其换成相同的颜色 -->
+    <div class="icon1">wo</div>
+    <div class="icon2">wo</div>
+    <div class="icon3">wo</div>
+    <div class="icon4">wo</div>
+
+    <div class="icon1-data">mm</div>
+    <div class="icon2-data">mm</div>
+    <div class="icon3-ico">mm</div>
+
+</body>
+
+</html>

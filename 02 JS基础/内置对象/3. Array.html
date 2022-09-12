@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 创建数组
+        // 1、利用字面量
+        var arr = [1, 2, 3];
+        console.log(arr[0]);
+        // 2、利用new Array()
+        // var arr1 = new Array(); //创建一个空数组
+        // var arr1 = new Array(2);// 表示数组的长度为2 有2个空的数组元素
+        var arr1 = new Array(2, 3); // 等价于[2,3] 表示有2个数组元素，分别是2、3
+        console.log(arr1);
+
+        //  检测是否为数组
+        // (1) instanceof 
+        var arr = [];
+        var obj = {};
+        console.log(arr instanceof Array);
+        console.log(obj instanceof Array);
+        // (2) Array.isArray(参数) H5新增方法 ie9以上版本支持
+        console.log(Array.isArray(arr));
+        console.log(Array.isArray(obj));
+
+        // 翻转数组
+        function reverse(arr) {
+            if (Array.isArray(arr)) {
+                var newArr = [];
+                for (var i = arr.length - 1; i >= 0; i--) {
+                    newArr[newArr.length] = arr[i]
+                }
+                return newArr
+            } else {
+                return 'error 必须是数组格式';
+            }
+        }
+        console.log(reverse([1, 2, 3]));
+        console.log(reverse(1, 2, 3));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
